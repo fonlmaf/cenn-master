@@ -1,0 +1,31 @@
+
+%Function:	Majority vote-taker.
+
+%TemLibName:	MajorityVoteTaker (Algorithm!)
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:P, Boundary:Fixed(0)
+
+%Output:	Binary image (Phase 2).
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+neighborhood: 1
+
+nonlin_feedback:
+
+ 0 0 0
+ 0 a0 2
+ 0 0 0
+
+a 0 3 -0.025 0  0 0  0.025 1
+
+current: 0
+
+

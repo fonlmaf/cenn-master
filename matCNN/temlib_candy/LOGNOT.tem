@@ -1,0 +1,33 @@
+
+%Function:	Logic NOT (alt: Set Complementation)
+
+%TemLibName:	LogicNOT
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:Arbitrary(0), Boundary:Fixed(0)
+
+%Output:	Binary image where each black pixel in P becomes white, and vice versa.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood: 1
+
+Feedback:
+0 0 0
+0 1 0
+0 0 0
+
+Current: 0
+
+Control:
+0  0  0
+0 -2  0
+0  0  0
+
+
+

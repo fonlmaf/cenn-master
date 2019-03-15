@@ -1,0 +1,33 @@
+
+%Function:	Logic OR (alt: Set Union).
+
+%TemLibName:	LogicOR
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Two static binary images P1 and P2
+
+%Setting:	Input:P1, IniState:P2, Boundary:Fixed(0)
+
+%Output:	Binary output of the logic operation OR between P1 and P2 (Set Union).
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood:	1
+
+Feedback:	
+ 0 0 0
+ 0 2 0
+ 0 0 0
+
+
+Current: 1
+
+Control:	
+ 0 0 0
+ 0 1 0
+ 0 0 0
+
+

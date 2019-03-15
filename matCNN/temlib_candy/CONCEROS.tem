@@ -1,0 +1,21 @@
+
+%Function:	Erosion (algo#).
+
+%TemLibName:	- ?
+
+%CNNModel:	Single-layer, CT-CNN
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NEIGHBORHOOD: 1
+
+FEEDBACK:
+0  0  0
+0  2  0
+0  0  0
+
+CONTROL:
+1  1  1
+1  2  1
+1  1  1
+CURRENT: -0.5

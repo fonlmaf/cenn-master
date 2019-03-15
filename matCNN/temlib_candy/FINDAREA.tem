@@ -1,0 +1,31 @@
+
+%Function:	Finds solid black framed areas.
+
+%TemLibName:	FramedAreasFinder
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Two static binary images P1 (mask) and P2 (marker).
+
+%Setting:	Input:P1, IniState:P2, Boundary:Fixed(0)
+
+%Output:	Binary image representing those objects of P1 which are marked by P2.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NEIGHBORHOOD: 1
+
+FEEDBACK:
+   0  1  0
+   1  5  1
+   0  1  0
+
+control:
+ 0 0 0
+ 0 2 0
+ 0 0 0
+
+current: -5.25
+

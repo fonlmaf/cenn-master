@@ -1,0 +1,17 @@
+
+%Function:	Thresholding (algo#).
+
+%TemLibName:	- ?
+
+%CNNModel:	Single-layer, CT-CNN
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood: 1
+
+Feedback:
+ 0   0	 0
+ 0   2	 0
+ 0   0	 0
+
+Current:  0.0

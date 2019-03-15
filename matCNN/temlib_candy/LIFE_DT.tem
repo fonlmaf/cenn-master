@@ -1,0 +1,46 @@
+
+%Function:	Simulates the game of life on a 3-layer DTCNN.
+
+%TemLibName:	GameofLifeDTCNN2
+
+%CNNModel:	Multi-layer(3), DT-CNN
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 3 layer DTCNN life game
+
+nrlayers: 3
+
+layer: 1
+neighborhood: 1
+feedback from 3
+ 0.3 0.3 0.3
+ 0.3 0.3 0.3
+ 0.3 0.3 0.3
+
+current: 1
+
+layer: 2
+
+neighborhood: 1
+feedback from 3
+ -0.6 -0.6 -0.6
+ -0.6  0   -0.6
+ -0.6 -0.6 -0.6
+
+current: -0.8
+
+layer: 3
+neighborhood: 1
+feedback from 1
+ 0 0 0
+ 0 1 0
+ 0 0 0
+	
+feedback from 2
+ 0 0 0
+ 0 1 0
+ 0 0 0	
+
+current: -1.5
+

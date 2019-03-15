@@ -1,0 +1,31 @@
+
+%Function:	Creates the left shadow of the object.
+
+%TemLibName:	LeftShadow
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:1, Boundary:Fixed(0)
+
+%Output:	Binary image representing the left shadow of the objects in P.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood: 1
+
+Feedback:
+0 0 0
+0 2 2
+0 0 0
+
+Current: 0
+
+control:
+0 0 0
+0 2 0
+0 0 0
+

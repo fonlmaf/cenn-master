@@ -1,0 +1,25 @@
+
+%Function:	Blue channel extraction (algo#).
+
+%TemLibName:	- ?
+
+%CNNModel:	Single-layer, CT-CNN
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 1
+
+feedback:
+	0 0 0
+	0 1 0
+	0 0 0
+
+current: -0.7
+
+nonlin_control:
+	b- b- b-
+	b- 0  b-
+	b- b- b-
+
+b 1 5  -3 2  -2 2  0 0	2 2  3 2
+

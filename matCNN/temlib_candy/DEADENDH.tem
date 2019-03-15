@@ -1,0 +1,31 @@
+
+%Function:	Finds the endings of horizontal (1-pixel wide) objects.
+
+%TemLibName:	DeadEndH
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:Arbitrary(0), Boundary:Fixed(0)
+
+%Output:	Binary image of the endings of the horizontal (1-pixel wide) objects.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NEIGHBORHOOD: 1
+
+FEEDBACK:
+0  0  0
+0  3  0
+0  0  0
+
+CONTROL:
+-0.25  -0.25  -0.25
+-0.25  0.5  -0.25
+-0.25  -0.25  -0.25
+
+
+CURRENT: -5.8

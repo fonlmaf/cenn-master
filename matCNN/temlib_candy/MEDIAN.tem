@@ -1,0 +1,33 @@
+
+%Function:	Removes impulse noise from a grayscale image
+
+%TemLibName:	MedianFilter
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static gray-scale image P (impulse noise corrupted).
+
+%Setting:	Input:P, IniState:Arbitrary(0), Boundary:Zero-flux
+
+%Output:	Gray-scale image representing P filtered from impulse noise.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NEIGHBORHOOD: 1
+
+FEEDBACK:
+0 0 0
+0 1 0
+0 0 0
+
+NONLIN_D:
+x-u#
+d d d
+d 0 d
+d d d
+
+d 0 2   0.01 0.5   2.5 -0.5
+
+CURRENT 0.0

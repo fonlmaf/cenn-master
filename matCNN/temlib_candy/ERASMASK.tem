@@ -1,0 +1,31 @@
+
+%Function:	Masked erase.
+
+%TemLibName:	MaskedObjectExtractor
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P1 (mask) and P2
+
+%Setting:	Input:P1, IniState:P2, Boundary:Fixed(0)
+
+%Output:	Binary image that is the result of erasing P2 from left to right. Erasure is stopped by the black walls on the mask (P1) image.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 1
+
+feedback:
+ 0  0  0
+ 1.5 3 0
+ 0  0  0
+
+control:
+0  0 0
+0  1.5 0
+0  0 0
+
+current: -1.5
+

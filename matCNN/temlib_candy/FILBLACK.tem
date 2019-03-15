@@ -1,0 +1,28 @@
+
+%Function:	Drives the whole network into black.
+
+%TemLibName:	BlackFiller
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static gray-scale image P
+
+%Setting:	Input:-, IniState:P, Boundary:Fixed(0)
+
+%Output:	Binary (black) image.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood:	1
+
+Feedback:	
+ 0 0 0
+ 0 2 0
+ 0 0 0
+
+Current:	4
+
+
+

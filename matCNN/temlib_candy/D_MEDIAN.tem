@@ -1,0 +1,33 @@
+
+%Function:	Filtering-reconstruction with a statistical (median) filter.
+
+%TemLibName:	- ?
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static (noisy) gray-scale image P
+
+%Setting:	Input:P, IniState:P, Boundary:Zero-flux
+
+%Output:	Grayscale image representing the median of pixel intensities of P in a local neighborhood (r=1).
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NEIGHBORHOOD: 1
+
+FEEDBACK:
+0 0 0
+0 1 0
+0 0 0
+
+NONLIN_D:
+x-u#
+d d d
+d 0 d
+d d d
+
+d 0 2   0.01 0.5   2.5 -0.5
+
+CURRENT 0.0

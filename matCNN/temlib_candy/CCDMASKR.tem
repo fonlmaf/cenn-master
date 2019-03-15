@@ -1,0 +1,31 @@
+
+%Function:	Masked (left-to-right) connected component detection.
+
+%TemLibName:	MaskedCCD
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary images P1 (mask) and P2
+
+%Setting:	Input:P1, IniState:P2, Boundary:Fixed(0)
+
+%Output:	Binary image that is the result of CCD type shifting P2 from left to right. Shifting is controlled by the mask P1.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 1
+
+feedback:
+0 0 0
+-1 2 1
+0 0 0
+
+control:
+0  0 0
+0 -3 0
+0  0 0
+
+current: -3
+

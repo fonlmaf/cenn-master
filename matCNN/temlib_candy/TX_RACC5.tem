@@ -1,0 +1,34 @@
+
+%Function:	Segmentation of four textures.
+
+%TemLibName:	5x5TextureSegmentation2
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static gray-scale image P representing four textures
+
+%Setting:	Input:P, IniState:P, Boundary:Fixed(0)
+
+%Output:	Nearly binary image representing four patterns that differ in average gray-levels.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 2
+
+feedback:
+   4.2188   -1.5625    1.5625    3.3594    0.6250 
+  -2.8906    4.5313   -0.2344    3.1250   -2.8906 
+   2.6563    2.1875   -4.6875   -3.4375   -2.8125 
+   3.9844    1.5625   -1.1719   -3.1250   -3.2031 
+  -3.7500   -2.1875    3.2813    2.1875   -0.6250 
+
+current:  -5.0000
+
+control:
+   4.0625   -5.0000    0.3906    2.1094   -1.8750 
+   3.9063    0.3125   -1.9531    4.8438   -0.3125 
+   0.0000   -4.0625    0.9375   -0.3125    0.4688 
+  -0.6250   -5.0000    2.3438    0.6250   -1.8750 
+   3.5938   -0.9375    0.1563    2.8125   -1.8750 

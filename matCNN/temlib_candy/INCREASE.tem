@@ -1,0 +1,26 @@
+
+%Function:	Increases the object by one pixel.
+
+%TemLibName:	ObjectIncreasing
+
+%CNNModel:	Single-layer, DT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:Arbitrary(0), IniState:P, Boundary:Zero-flux
+
+%Output:	Binary image representing the objects of P increased by 1 pixel in all direction.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 1
+
+feedback:
+       .5  .5  .5
+       .5  .5  .5
+       .5  .5  .5
+
+current: 4
+

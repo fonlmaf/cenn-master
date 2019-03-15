@@ -1,0 +1,31 @@
+
+%Function:	Logic AND (and Set Intersection).
+
+%TemLibName:	LogicAND
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Two static binary images P1 and P2
+
+%Setting:	Input:P1, IniState:P2, Boundary:Fixed(0)
+
+%Output:	Binary output of the logic operation AND between P1 and P2 (Set Intersection).
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood:   1
+
+Feedback:  
+0 0 0
+0 2 0
+0 0 0
+
+Current:  -1
+
+Control:   
+0 0 0
+0 1 0
+0 0 0
+

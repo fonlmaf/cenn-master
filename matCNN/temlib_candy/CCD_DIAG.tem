@@ -1,0 +1,25 @@
+
+%Function:	Diagonal connected component detection.
+
+%TemLibName:	DiagonalCCD
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:-, IniState:P, Boundary:Fixed(0)
+
+%Output:	Binary image that shows the number of diagonally connected components in P.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 1
+
+feedback:
+1  0  0
+0  2  0
+0  0 -1
+
+

@@ -1,0 +1,26 @@
+
+%Function:	Deletes small objects.
+
+%TemLibName:	SmallObjectRemover
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:-, IniState:P, Boundary:Fixed(0)
+
+%Output:	Binary image representing P without small objects.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NEIGHBORHOOD: 1
+
+FEEDBACK:
+ 1  1  1
+ 1  2  1
+ 1  1  1
+
+
+

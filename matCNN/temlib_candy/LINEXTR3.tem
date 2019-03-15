@@ -1,0 +1,39 @@
+
+%Function:	Lines-not-longer-than-3-pixels detector .
+
+%TemLibName:	LE3pixelLineDetector
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:P, Boundary:Fixed(0)
+
+%Output:	Binary image representing only lines not longer than 3 pixels in P.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%  New version of the template
+%  Length tuning in several directions: detection of lines with length
+%  less or equal to 3 pixels
+
+neighborhood:  2
+
+FEEDBACK:
+ 0 0   0   0   0
+ 0 0.3 0.3 0.3 0
+ 0 0.3  3  0.3 0
+ 0 0.3 0.3 0.3 0
+ 0 0   0   0   0
+
+control:
+
+ -1  0 -1  0 -1
+ 0 -1 -1 -1  0
+ -1 -1  4 -1 -1
+ 0 -1 -1 -1  0
+ -1  0 -1  0 -1
+
+current:  -2

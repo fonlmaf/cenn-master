@@ -1,0 +1,30 @@
+
+%Function:	Deletes marked objects.
+
+%TemLibName:	Connectivity
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary images P1 (mask) and P2 (marker)
+
+%Setting:	Input:P1, IniState:P2, Boundary:Fixed(0)
+
+%Output:	Binary image containing only the unmarked objects in P1.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 1
+
+feedback:
+0   0.5   0
+0.5   3   0.5
+0   0.5   0
+
+control:
+ 0   -0.5   0   
+-0.5   3   -0.5   
+ 0   -0.5   0   
+
+current:  -4.5

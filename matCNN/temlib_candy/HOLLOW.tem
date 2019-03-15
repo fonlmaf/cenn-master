@@ -1,0 +1,31 @@
+
+%Function:	Fills the concave locations of objects
+
+%TemLibName:	ConcaveLocationFiller
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:P, Boundary:Fixed(0)
+
+%Output:	Binary image in which the concave locations of objects are black.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NEIGHBORHOOD: 1
+
+FEEDBACK:
+  0.5  0.5  0.5
+  0.5   2   0.5
+  0.5  0.5  0.5
+
+control:
+ 0 0 0
+ 0 2 0
+ 0 0 0
+
+current: 3.25
+

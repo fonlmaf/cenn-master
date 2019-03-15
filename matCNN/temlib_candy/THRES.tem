@@ -1,0 +1,28 @@
+
+%Function:	Grayscale to binary threshold template
+
+%TemLibName:	Threshold
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static gray-scale image P
+
+%Setting:	Input:-, IniState:P, Boundary:Fixed(0)
+
+%Output:	Binary image where black pixels correspond to pixels in P with grayscale intensity above the given threshold.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NEIGHBORHOOD: 1
+
+FEEDBACK: 
+
+  0.000  0.000  0.000
+  0.000  2.000  0.000
+  0.000  0.000  0.000
+
+CURRENT: -0.4
+
+

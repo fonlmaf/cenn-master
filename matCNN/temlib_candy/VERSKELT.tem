@@ -1,0 +1,30 @@
+
+%Function:	Vertical skeleton from the top.
+
+%TemLibName:	VerSkelT
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:Arbitrary(0), Boundary:Fixed(0)
+
+%Output:	Binary image, peeling the black pixels from the top of the object.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+NEIGHBORHOOD: 1
+
+FEEDBACK:
+0  0  0
+0  3  0
+0  0  0
+
+CONTROL:
+
+0.5 0.5 0.5
+0 0.5 0
+0.125 -0.5 0.125
+
+CURRENT: -1

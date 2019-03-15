@@ -1,0 +1,30 @@
+
+%Function:	Textures detection.
+
+%TemLibName:	3x3TextureSegmentation
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static gray-scale image P representing textures having the same flat grayscale histograms
+
+%Setting:	Input:P, IniState:P, Boundary:Fixed(0)
+
+%Output:	Nearly binary image where the detected texture becomes darker than the others.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 1
+
+feedback:
+   1.6406   -1.0156    1.3281 
+   1.8750   -4.6094    2.8906 
+   3.2813    2.0313    3.7500 
+
+current:  -2.4219
+
+control:
+  -3.9063   -2.6563   -3.1250 
+   0.9375    1.4844   -3.1250 
+   1.3281    0.5469    2.3438 

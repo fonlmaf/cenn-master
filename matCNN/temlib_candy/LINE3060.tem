@@ -1,0 +1,34 @@
+
+%Function:	Grayscale line detector.
+
+%TemLibName:	GrayscaleLineDetector
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:P, Boundary:Zero-flux
+
+%Output:	Binary image where black pixels correspond to the grayscale lines within a slope range of approximately 30deg-60deg in P.
+
+%Timing:	-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 1
+
+feedback:
+0 0 0
+0 1.5 0
+0 0 0
+
+current: -4.5
+
+nonlin_control:
+b-  a-	a-
+b-  0	a-
+a-  b-	b-
+
+a 0 3  -0.15 0	0.15 1 1 0
+b 0 2  0.25 0	1 1
+
+

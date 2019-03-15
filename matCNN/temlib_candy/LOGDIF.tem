@@ -1,0 +1,31 @@
+
+%Function:	Logic Difference (alt: Relative Set Complement).
+
+%TemLibName:	LogicDifference1
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Two static binary images P1 and P2
+
+%Setting:	Input:P1, IniState:P2, Boundary:Fixed(0)
+
+%Output:	Binary image representing the set-theoretic, or logic complement of P2 relative to P1.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood: 1
+
+Feedback:
+0 0 0
+0 2 0
+0 0 0
+
+Current: -1
+
+control:
+0  0  0
+0 -1  0
+0  0  0
+

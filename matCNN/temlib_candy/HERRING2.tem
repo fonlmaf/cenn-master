@@ -1,0 +1,46 @@
+
+%Function:	Herring-grid illusion.
+
+%TemLibName:	HerringGridIllusion
+
+%CNNModel:	Multi-layer(2), CT-CNN
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NRLAYERS 2
+
+NEIGHBORHOOD: 2
+
+LAYER 1  % active layer
+
+CONTROL FROM 1
+-0.16 -0.16 -0.16 -0.16 -0.16
+-0.16 -0.40 -0.40 -0.40 -0.16
+-0.16 -0.40  5.8  -0.40 -0.16
+-0.16 -0.40 -0.40 -0.40 -0.16
+-0.16 -0.16 -0.16 -0.16 -0.16
+
+FEEDBACK FROM 2
+-.1 -.1 -.1 -.1 -.1
+-.1 -.3 -.3 -.3 -.1
+-.1 -.3   0 -.3 -.1
+-.1 -.3 -.3 -.3 -.1
+-.1 -.1 -.1 -.1 -.1
+
+LAYER 2  % delay implementation
+
+FEEDBACK FROM 2
+0 0 0 0 0
+0 0 0 0 0
+0 0 1 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+FEEDBACK FROM 1
+0 0 0 0 0
+0 0 0 0 0
+0 0 1 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+

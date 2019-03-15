@@ -1,0 +1,63 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+import matplotlib as mpl
+mpl.use('Agg')
+import matplotlib.pyplot as plt
+import numpy as np
+
+# 必须配置中文字体，否则会显示成方块
+# 注意所有希望图表显示的中文必须为unicode格式
+custom_font = mpl.font_manager.FontProperties(fname='/Library/Fonts/华文细黑.ttf')
+
+font_size = 24 # 字体大小
+fig_size = (11, 7) # 图表大小
+
+names = (u'Basic', u'SLO+MLO',u'SLO+MLO+DSLO') # 姓名
+subjects = (u'LUTs', u'Pipeline Depth', u'Computational\n Performance') # 科目
+scores = ((1, 1, 1), (1, 92/82, 45.21/22.41),(1,37/82,86.98/22.41)) # 成绩
+
+# 更新字体大小
+mpl.rcParams['font.size'] = font_size
+# 更新图表大小
+mpl.rcParams['figure.figsize'] = fig_size
+# 设置柱形图宽度
+bar_width = 0.35
+
+index = np.arange(len(scores[0]))
+# 绘制「小明」的成绩
+rects1 = plt.bar(index, scores[0], bar_width, color='royalblue', label=names[0])
+# 绘制「小红」的成绩
+rects2 = plt.bar(index + bar_width, scores[1], bar_width, color='darkorange', label=names[1])
+rects2 = plt.bar(index + 2*bar_width, scores[2], bar_width, color='r', label=names[2])
+# X轴标题
+plt.xticks(index + bar_width, subjects)#, fontproperties=custom_font)
+# Y轴范围
+plt.ylim(ymax=4.2, ymin=0)
+# 图表标题
+#plt.title(u'企鹅班同学成绩对比', fontproperties=custom_font)
+# 图例显示在图表下方
+plt.legend(fontsize=20,loc='upper left')
+
+# 添加数据标签
+def add_labels(rects):
+    for rect in rects:
+    #    height = rect.get_height()
+    #    plt.text(rect.get_x() + rect.get_width() / 2, height, height, ha='center', va='bottom')
+        # 柱形图边缘用白色填充，纯粹为了美观
+        rect.set_edgecolor('white')
+
+add_labels(rects1)
+add_labels(rects2)
+add_labels(rects3)
+
+plt.axhline(y=1,hold=None,label="1",color='darkolivergreen',linestyle="--")
+plt.axhline(y=2.02,hold=None,label="1",color='darkolivergreen',linestyle="--")
+plt.axhline(y=3.88,hold=None,label="1",color='darkolivergreen',linestyle="--")
+plt.text(1.2,2.2,r'3.88x',fontsize=20)
+plt.text(1.7,1.5,r'2.02x',fontsize=20)
+plt.annotate('',xy=(1.47,1),xytext=(1.47,3.88)arrowprops=dict(arrowstyle="<->",connectionstyle="arc3"))
+plt.annotate('',xy=(1.97,1),xytext=(1.97,2.02)arrowprops=dict(arrowstyle="<->",connectionstyle="arc3"))
+
+# 图表输出到本地
+plt.savefig('overall.pdf')

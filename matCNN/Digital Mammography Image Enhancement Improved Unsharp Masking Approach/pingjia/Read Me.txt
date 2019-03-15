@@ -1,0 +1,15 @@
+% (c) Akshay Gore %
+% Department of Electronics and Communication Engineering
+% Chandigarh University, India
+% akshaygore@live.com %
+% %
+% To report your comment or any bug please send e-mail to: %
+% akshaygore@live.com
+
+
+Please download Database
+
+MIAS ( Mammographic Image Analysis Society ), MiniMammographic 
+Database, 
+
+http://peipa.essex.ac.uk/ipa/pix/mias/.

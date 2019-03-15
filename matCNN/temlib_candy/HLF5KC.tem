@@ -1,0 +1,35 @@
+
+%Function:	5x5 image halftoning.
+
+%TemLibName:	5x5Halftoning1
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static gray-scale image P
+
+%Setting:	Input:P, IniState:P, Boundary:Fixed(0)
+
+%Output:	Binary image preserving the main features of P.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 2
+
+feedback:
+           -0.030 -0.086 -0.130 -0.086 -0.030
+           -0.086 -0.359 -0.604 -0.359 -0.086
+           -0.130 -0.604  1.050 -0.604 -0.130
+           -0.086 -0.359 -0.604 -0.359 -0.086
+           -0.030 -0.086 -0.130 -0.086 -0.030
+
+current:   0.0
+
+control:
+            0.000  0.000  0.068  0.000  0.000
+            0.000  0.355  0.756  0.355  0.000
+            0.068  0.756  2.122  0.756  0.068
+            0.000  0.355  0.756  0.355  0.000
+            0.000  0.000  0.068  0.000  0.000
+

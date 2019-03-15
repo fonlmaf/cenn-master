@@ -1,0 +1,35 @@
+
+%Function:	Adaptive binary edge detection.
+
+%TemLibName:	- ?
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:P, Boundary:Zero-flux
+
+%Output:	Binary image showing an edge map of P in black.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood: 1
+
+FEEDBACK
+0.0  0.0  0.0  0.0  0.0
+0.0  0.0  0.5  0.0  0.0
+0.0  0.5  2.0  0.5  0.0
+0.0  0.0  0.5  0.0  0.0
+0.0  0.0  0.0  0.0  0.0
+
+CONTROL
+0.0  0.0  0.0  0.0  0.0
+0.0  0.0  0.15 0.0  0.0
+0.0  0.15 0.45 0.15 0.0
+0.0  0 0  0.15 0.0  0.0
+0.0  0.0  0.0  0.0  0.0
+
+CURRENT 0.0
+

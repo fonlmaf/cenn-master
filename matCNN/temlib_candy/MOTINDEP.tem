@@ -1,0 +1,42 @@
+
+%Function:	Direction independent (only speed dependent) motion detection.
+
+%TemLibName:	MotionDetection2
+
+%CNNModel:	Single-layer, CT-CNN, Delayed
+
+%Given:		Static binary image P.
+
+%Setting:	Input:P, IniState:P, Boundary:Fixed(0)
+
+%Output:	Binary image representing only objects of P moving slower than 1 pixel/delay-time.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood: 1
+
+Feedback:
+0 0 0
+0 1 0
+0 0 0
+
+Current: -2
+
+Control:
+0 0 0
+0 6 0
+0 0 0
+
+delay: 10
+delayed_feedback:
+0.68  0.68  0.68
+0.68  0.68  0.68
+0.68  0.68  0.68
+
+delayed_Control:
+0 0 0
+0 0 0
+0 0 0
+

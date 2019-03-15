@@ -1,0 +1,31 @@
+
+%Function:	Inverts the halftoned image.
+
+%TemLibName:	3x3InverseHalftoning
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P obtained by using 3x3Halftoning
+
+%Setting:	Input:P, IniState:Arbitrary(0), Boundary:Zero-flux
+
+%Output:	Gray-scale image representing P.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 1
+
+feedback:
+  0  0	0
+  0  0	0
+  0  0	0
+
+current:   0.0000
+
+control:
+  0.07	0.1  0.07
+  0.1	0.32 0.1
+  0.07	0.1  0.07
+

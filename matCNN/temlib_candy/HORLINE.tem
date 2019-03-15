@@ -1,0 +1,31 @@
+
+%Function:	Horizontal line detector.
+
+%TemLibName:	- ?
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:P, Boundary:Zero-flux
+
+%Output:	Binary image, representing the horizontal lines in P.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 1
+
+feedback:
+0.0000	 0.0000   0.0000
+1.0000	 2.0000   1.0000
+0.0000	 0.0000   0.0000
+
+control:
+0   0	0
+1   2	1
+0   0	0
+
+current:  -1
+

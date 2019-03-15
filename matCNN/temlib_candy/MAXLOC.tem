@@ -1,0 +1,32 @@
+
+%Function:	Local maxima detector.
+
+%TemLibName:	LocalMaximaDetector
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static gray-scale image P.
+
+%Setting:	Input:P, IniState:Arbitrary(0), Boundary:Fixed(0)
+
+%Output:	Binary image representing the locations of all local maxima in the specified local neighborhood.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NEIGHBORHOOD: 1
+
+FEEDBACK 
+ 0 0 0
+ 0 3 0
+ 0 0 0
+
+NONLIN_CONTROL
+ a- a- a-
+ a- 0  a-
+ a- a- a-
+
+a 0 2   0.001  0   2 0.5
+
+CURRENT -3.5

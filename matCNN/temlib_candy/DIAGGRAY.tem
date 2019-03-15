@@ -1,0 +1,38 @@
+
+%Function:	Gray-scale diagonal line-detector.
+
+%TemLibName:	GrayscaleDiagonalLineDetector
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static gray-scale image P
+
+%Setting:	Input:P, IniState:Arbitrary(0), Boundary:Fixed(0)
+
+%Output:	Binary image where black pixels identify the diagonal lines of north-west, south-eastern direction in P.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood: 2
+
+feedback:
+ 0 0 0 0 0
+ 0 0 0 0 0
+ 0 0 1 0 0
+ 0 0 0 0 0
+ 0 0 0 0 0
+
+current: -1.8
+
+nonlin_control:
+ b-  b-  a-  a-  a-
+ b-  b-  b-  a-  a-
+ a-  b-  0   b-  a-
+ a-  a-  b-  b-  b-
+ a-  a-  a-  b-  b-
+
+a 0 3 -0.18 -0.5  0.18 -0.5  1	0.5
+b 0 3 -0.18  0.5  0.18	0.5  1 -0.5
+

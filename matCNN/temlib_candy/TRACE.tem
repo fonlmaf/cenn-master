@@ -1,0 +1,42 @@
+
+%Function:	Traces the path of moving objects on black-and-white images.
+
+%TemLibName:	PathTracing
+
+%CNNModel:	Multi-layer(2), CT-CNN
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NRLAYERS 2
+
+LAYER 1
+neighborhood 1
+
+feedback from 1
+0.3   0.3   0.3
+0.3   4     0.3
+0.3   0.3   0.3
+
+control from 1
+0   0	0
+0   5.1 0
+0   0	0
+
+current 0
+
+LAYER 2
+neighborhood 1
+
+feedback from 2
+0   0	0
+0   2	0
+0   0	0
+
+feedback from 1
+0  0  0
+0  3  0
+0  0  0
+
+current  2
+
+

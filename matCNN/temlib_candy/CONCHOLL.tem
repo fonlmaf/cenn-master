@@ -1,0 +1,21 @@
+
+%Function:	Hollow (algo#).
+
+%TemLibName:	- ?
+
+%CNNModel:	Single-layer, CT-CNN
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NEIGHBORHOOD: 1
+
+FEEDBACK:
+	    0.5  0.5  0.5
+	    0.5   2   0.5
+	    0.5  0.5  0.5
+control:
+ 0 0 0
+ 0 2 0
+ 0 0 0
+current: 3.5
+

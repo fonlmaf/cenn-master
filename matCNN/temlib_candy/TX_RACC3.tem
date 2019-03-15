@@ -1,0 +1,30 @@
+
+%Function:	Segmentation of four textures.
+
+%TemLibName:	3x3TextureSegmentation
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static gray-scale image P representing four textures
+
+%Setting:	Input:P, IniState:P, Boundary:Fixed(0)
+
+%Output:	Nearly binary image representing four patterns that differ in average gray-levels.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 1
+
+feedback:
+   0.8594    0.9375    3.7500 
+   2.1094   -2.8125    3.7500 
+  -1.3281   -2.5781   -1.0156 
+
+current:   1.7969
+
+control:
+   0.1563   -1.5625    1.2500 
+  -2.8906    1.0938   -3.2031 
+   4.0625    4.6875    3.7500 

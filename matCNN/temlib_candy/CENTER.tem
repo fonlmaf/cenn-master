@@ -1,0 +1,96 @@
+
+%Function:	Center point detection.
+
+%TemLibName:	- ?
+
+%CNNModel:	Single-layer, CT-CNN
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% time varying skeleton template, no logic required
+
+label 1
+
+template: 1
+new
+neighborhood: 1
+feedback:
+   1  0   0
+   1  4  -1
+   1  0   0
+
+current: -1
+
+template: 1
+new
+neighborhood: 1
+feedback:
+   1  1  1
+   1  6  0
+   1  0 -1
+
+current: -1
+
+template: 1
+new
+neighborhood: 1
+feedback:
+   1  1  1
+   0  4  0
+   0 -1  0
+
+current: -1
+
+template: 1
+new
+neighborhood: 1
+feedback:
+   1  1  1
+   0  6  1
+  -1  0  1
+
+current: -1
+
+template: 1
+new
+neighborhood: 1
+feedback:
+   0  0  1
+  -1  4  1
+   0  0  1
+
+current: -1
+
+template: 1
+new
+neighborhood: 1
+feedback:
+  -1  0  1
+   0  6  1
+   1  1  1
+
+current: -1
+
+template: 1
+new
+neighborhood: 1
+feedback:
+   0 -1  0
+   0  4  0
+   1  1  1
+
+current: -1
+
+template: 1
+new
+neighborhood: 1
+feedback:
+   1	 0    -1
+   1     6     0
+   1	 1     1
+
+current: -1
+
+
+loop: 1 9
+

@@ -1,0 +1,30 @@
+
+%Function:	The algorithm finds the skeleton of a black-and-white object.
+
+%TemLibName:	BlackandWhiteSkeletonization (Algorithm!)
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:Arbitrary(0), Boundary:Zero-flux
+
+%Output:	Binary image (Phase 6 of the skeletonization algorithm).
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 1
+
+feedback:
+0   0   0
+0   1   0
+0   0   0
+
+control:
+-0.5   -1  -0.5
+  0     7    0   
+  1     1    1   
+
+current:  -3.4

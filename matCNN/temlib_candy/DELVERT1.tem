@@ -1,0 +1,30 @@
+
+%Function:	Deletes vertical lines.
+
+%TemLibName:	VerticalLineRemover
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:Arbitrary(0), Boundary:Fixed(-1)
+
+%Output:	Binary image representing P without vertical lines. Those parts of the objects that could be interpreted as vertical lines will also be deleted.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 1
+
+feedback:
+0.0000   0.0000   0.0000
+0.0000   1.0000   0.0000
+0.0000   0.0000   0.0000
+
+control:
+0.0000   -1.0000   0.0000   
+0.0000   1.0000   0.0000   
+0.0000   -1.0000   0.0000   
+
+current:  -2.0000

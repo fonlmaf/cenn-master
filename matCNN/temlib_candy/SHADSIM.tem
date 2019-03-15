@@ -1,0 +1,26 @@
+
+%Function:	Creates a vertical shadow of the object (in both directions).
+
+%TemLibName:	VerticalShadow
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:P, Boundary:Zero-flux
+
+%Output:	Binary image representing the vertical shadow of the objects in P taken upward and downward simultaneously.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood: 1
+
+Feedback:
+0  1  0
+0  2  0
+0  1  0
+
+current: 2
+

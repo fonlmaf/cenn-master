@@ -1,0 +1,30 @@
+
+%Function:	Deletes one pixel wide diagonal lines.
+
+%TemLibName:	DiagonalLineRemover
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:Arbitrary(0), Boundary:Fixed(-1)
+
+%Output:	Binary image where black pixels have no black neighbors in diagonal directions in P.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 1
+
+feedback:
+0.0000   0.0000   0.0000
+0.0000   1.0000   0.0000
+0.0000   0.0000   0.0000
+
+control:
+-1.0000   0.0000   -1.0000   
+0.0000   1.0000   0.0000   
+-1.0000   0.0000   -1.0000   
+
+current:  -4.0000

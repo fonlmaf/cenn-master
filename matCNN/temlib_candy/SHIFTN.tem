@@ -1,0 +1,29 @@
+
+%Function:	Shifts the image toward northern direction.
+
+%TemLibName:	- ?
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:0, Boundary:Zero-flux
+
+%Output:	Binary image - P is shifted toward the northern direction by one pixel.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NEIGHBORHOOD: 1
+
+control:
+0	0	0
+0	0	0
+0	1	0
+
+feedback:
+0	0	0
+0	2	0
+0	0	0
+

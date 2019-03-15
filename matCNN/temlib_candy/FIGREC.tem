@@ -1,0 +1,31 @@
+
+%Function:	Reconstructs marked figures.
+
+%TemLibName:	FigureReconstructor
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Two static binary images P1 (mask) and P2 (marker). P2 contains just a part of P1.
+
+%Setting:	Input:P1, IniState:P2, Boundary:Fixed(0)
+
+%Output:	Binary image representing those objects of P1 which are marked by P2.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood: 1
+
+Feedback:
+0.5 0.5 0.5
+0.5 4.0 0.5
+0.5 0.5 0.5
+
+Current: 3
+
+Control:
+0 0 0
+0 4 0
+0 0 0
+

@@ -1,0 +1,28 @@
+
+%Function:	Solves the Laplace PDE (Dx = 0).
+
+%TemLibName:	LaplacePDESolver
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static gray-scale image P
+
+%Setting:	Input:Arbitrary(0), IniState:P, Boundary:Zero-flux
+
+%Output:	Gray-scale image - the solution of the Laplace equation.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+NEIGHBORHOOD: 1
+
+FEEDBACK:
+ 0	1	0
+ 1	-3	1
+ 0	1	0
+
+
+
+

@@ -1,0 +1,34 @@
+
+%Function:	Majority vote-taker (compares the sum in a local neigborhood to the specified threshold).
+
+%TemLibName:	- ?
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static gray-scale image P
+
+%Setting:	Input:P, IniState:Arbitrary(0), Boundary:Fixed(0)
+
+%Output:	Binary image - black pixels mark those locations where the sum in local neighborhood (r=1) exceeds the specified threshold.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+neighborhood: 1
+
+feedback:
+
+ 0 0 0
+ 0 1 0
+ 0 0 0
+
+control:
+
+ 1 1 1 
+ 1 1 1
+ 1 1 1
+
+current: -6.5
+

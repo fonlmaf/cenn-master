@@ -1,0 +1,30 @@
+
+%Function:	Smoothing with binary output.
+
+%TemLibName:	Smoothing
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static gray-scale image P
+
+%Setting:	Input:-, IniState:P, Boundary:Fixed(0)
+
+%Output:	Binary image where black (white) pixels correspond to the locations in P where the average of pixel intensities over the r=1 feedback convolution window is above (under) a given threshold.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NEIGHBORHOOD: 1
+
+FEEDBACK:
+	     0  0.9   0
+	    0.9 1.8  0.9
+	     0  0.9   0
+control:
+ 0 0 0
+ 0 0 0
+ 0 0 0
+
+current: 0
+

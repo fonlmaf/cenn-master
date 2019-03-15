@@ -1,0 +1,33 @@
+
+%Function:	Finds the locations where the gradient of the field is smaller than a given threshold value.
+
+%TemLibName:	Extreme
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static gray-scale image P
+
+%Setting:	Input:P, IniState:Arbitrary(0), Boundary:Fixed(0)
+
+%Output:	Binary image where black pixels represent the locations in P where the gradient of the field is smaller than a given threshold value.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 1
+
+feedback:
+	0 0 0
+	0 1 0
+	0 0 0
+
+current: 3.9
+
+nonlin_control:
+	a- a- a-
+	a- 0  a-
+	a- a- a-
+
+a 1 7  -3 -2  -0.21 -2	-0.2 -1   0 1  0.2 -1  0.21 -2	3 -2
+

@@ -1,0 +1,31 @@
+
+%Function:	Patch maker.
+
+%TemLibName:	PatchMaker
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:P, Boundary:Zero-flux
+
+%Output:	Binary image with enlarged objects of P obtained after a certain time.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NEIGHBORHOOD: 1
+
+FEEDBACK:
+   0  1  0
+   1  2  1
+   0  1  0
+
+control:
+ 0 0 0
+ 0 1 0
+ 0 0 0
+
+current: 4.5
+

@@ -1,0 +1,50 @@
+
+%Function:	Simulates one step of the game of life.
+
+%TemLibName:	GameofLife1Step
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:Arbitrary(0), Boundary:Fixed(-1)
+
+%Output:	Binary images representing partial results.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NRLAYERS 2
+
+LAYER 1
+neighborhood 1
+
+feedback from 1
+0.0000   0.0000   0.0000
+0.0000   1.0000   0.0000
+0.0000   0.0000   0.0000
+
+control from 1
+-1.0000   -1.0000   -1.0000
+-1.0000    0.0000   -1.0000
+-1.0000   -1.0000   -1.0000
+
+current -1.0000
+
+LAYER 2
+neighborhood 1
+
+feedback from 2
+0.0000   0.0000   0.0000
+0.0000   1.0000   0.0000
+0.0000   0.0000   0.0000
+
+control from 1
+-1.0000  -1.0000  -1.0000
+-1.0000  -1.0000  -1.0000
+-1.0000  -1.0000  -1.0000
+
+current  -4.0000
+
+

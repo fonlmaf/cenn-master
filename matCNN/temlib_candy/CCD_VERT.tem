@@ -1,0 +1,25 @@
+
+%Function:	Vertical connected component detection.
+
+%TemLibName:	VerticalCCD
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:-, IniState:P, Boundary:Fixed(0)
+
+%Output:	Binary image that shows the number of vertically connected components in P.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood: 1
+
+Feedback:
+0  1  0
+0  2  0
+0 -1  0
+
+

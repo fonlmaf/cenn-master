@@ -1,0 +1,24 @@
+
+%Function:	Center point detection.
+
+%TemLibName:	CenterPointDetection (Algorithm!)
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:P, Boundary:Fixed(0)
+
+%Output:	Binary image where a black pixel indicates the approximated center point of the object in P.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 1
+feedback:
+   1	 0    -1
+   1     6     0
+   1	 1     1
+
+current: -1

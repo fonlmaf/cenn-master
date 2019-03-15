@@ -1,0 +1,51 @@
+
+%Function:	Herring-grid illusion.
+
+%TemLibName:	HerringGridIllusion
+
+%CNNModel:	Single-layer, CT-CNN, Delayed
+
+%Given:		Static binary image P with a grid of black squares
+
+%Setting:	Input:P, IniState:Arbitrary(0), Boundary:Zero-flux
+
+%Output:	Gray-scale image representing P with gray patches at the intersections of the grid of black squares.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 2
+
+feedback:
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+
+current: 0
+
+control:
+-0.16 -0.16 -0.16 -0.16 -0.16
+-0.16 -0.40 -0.40 -0.40 -0.16
+-0.16 -0.40  4.00 -0.40 -0.16
+-0.16 -0.40 -0.40 -0.40 -0.16
+-0.16 -0.16 -0.16 -0.16 -0.16
+
+delay: 3
+
+delayed_feedback:
+-.1 -.1 -.1 -.1 -.1
+-.1 -.3 -.3 -.3 -.1
+-.1 -.3   0 -.3 -.1
+-.1 -.3 -.3 -.3 -.1
+-.1 -.1 -.1 -.1 -.1
+
+delayed_control:
+0  0  0  0  0
+0  0  0  0  0
+0  0  0  0  0
+0  0  0  0  0
+0  0  0  0  0
+

@@ -1,0 +1,30 @@
+
+%Function:	Binary edge detection.
+
+%TemLibName:	EdgeDetector
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:Arbitrary(0), Boundary:Zero-flux
+
+%Output:	Binary image showing all edges of P in black.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 1
+
+feedback:
+0.0000   0.0000   0.0000
+0.0000   1.0000   0.0000
+0.0000   0.0000   0.0000
+
+control:
+-1.0000   -1.0000   -1.0000   
+-1.0000    8.0000   -1.0000   
+-1.0000   -1.0000   -1.0000   
+
+current:  -1.0000

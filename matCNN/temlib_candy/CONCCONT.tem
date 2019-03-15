@@ -1,0 +1,31 @@
+
+%Function:	Concentric contour detection.
+
+%TemLibName:	ConcentricContourDetector
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:P, Boundary:Fixed(0)
+
+%Output:	Binary image where a black pixel indicates the approximated center point of the object in P.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 1
+
+feedback:
+	0  -1  0
+       -1 3.5 -1
+	0  -1  0
+
+control:
+	0 0 0
+	0 4 0
+	0 0 0
+
+current: -4
+

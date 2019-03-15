@@ -1,0 +1,32 @@
+
+%Function:	Finds matching patterns.
+
+%TemLibName:	PatternMatchingFinder
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P possessing the 3x3 pattern prescribed by the template.
+
+%Setting:	Input:P, IniState:Arbitrary(0), Boundary:Fixed(0)
+
+%Output:	Binary image representing the locations of the 3x3 pattern prescribed by the template. The pattern having a black/white pixel where the template value is +1/-1, respectively, is detected.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood:  1
+
+Feedback: 
+ 0 0 0
+ 0 1 0
+ 0 0 0
+
+Current: -6.5
+
+Control: 
+ 1 -1 1
+ 0 1 0
+ 1 -1 1
+
+

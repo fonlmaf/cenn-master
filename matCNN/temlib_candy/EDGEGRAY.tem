@@ -1,0 +1,32 @@
+
+%Function:	Gray-scale edge detection.
+
+%TemLibName:	- ?
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static gray-scale image P
+
+%Setting:	Input:P, IniState:Arbitrary(0), Boundary:Zero-flux
+
+%Output:	Gray-scale image showing an edge map of P in black.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NEIGHBORHOOD: 1
+
+FEEDBACK:
+0  0  0
+0  2  0
+0  0  0
+
+CURRENT: -0.5
+
+CONTROL:
+-1.0  -1.0  -1.0
+
+-1.0   8.0  -1.0
+
+-1.0  -1.0  -1.0

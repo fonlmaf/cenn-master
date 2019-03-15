@@ -1,0 +1,30 @@
+
+%Function:	Extracts the junctions of a skeleton.
+
+%TemLibName:	JunctionExtractor
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:Arbitrary(0), Boundary:Zero-flux
+
+%Output:	Binary image showing the junctions of a skeleton.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 1
+
+feedback:
+0.0000   0.0000   0.0000
+0.0000   1.0000   0.0000
+0.0000   0.0000   0.0000
+
+control:
+1.0000   1.0000   1.0000   
+1.0000   6.0000   1.0000   
+1.0000   1.0000   1.0000   
+
+current:  -3

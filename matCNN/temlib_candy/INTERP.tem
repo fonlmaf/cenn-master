@@ -1,0 +1,27 @@
+
+%Function:	Interpolates a smooth surface through given points.
+
+%TemLibName:	SurfaceInterpolation
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		A static grayscale image P1 and a static binary image P2
+
+%Setting:	Input:-, IniState:P1, Boundary:Fixed(0), BiasMap:-, FixedStateMap:P2
+
+%Output:	Grayscale image representing an interpolated surface that fits the given points and is as smooth as possible.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NEIGHBORHOOD: 2
+
+FEEDBACK:
+	    0   0  -2  0  0
+	    0  -4  16 -4  0
+           -2  16 -39 16 -2
+            0  -4  16 -4  0 
+	    0   0  -2  0  0
+
+

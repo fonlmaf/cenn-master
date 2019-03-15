@@ -1,0 +1,23 @@
+
+%Function:	Peel one pixel from all directions (#).
+
+%TemLibName:	- ?
+
+%CNNModel:	Single-layer, CT-CNN
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood:	1
+
+Feedback:	
+ 0  0.4	0
+ 0.4  1.4 0.4
+ 0  0.4	0
+
+Current: -7.2
+
+Control:	
+ 4.6  -2.8  4.6
+ -2.8   1   -2.8
+ 4.6  -2.8  4.6
+

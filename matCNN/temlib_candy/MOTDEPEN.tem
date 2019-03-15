@@ -1,0 +1,40 @@
+
+%Function:	Direction and speed dependent motion detection.
+
+%TemLibName:	MotionDetection1
+
+%CNNModel:	Single-layer, CT-CNN, Delayed
+
+%Given:		Static binary image P.
+
+%Setting:	Input:P, IniState:P, Boundary:Fixed(0)
+
+%Output:	Binary image representing only objects of P moving horizontally to the right with a speed of 1 pixel/delay-time.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+comment  Motion detection in horizontal direction
+
+neighborhood: 1
+
+feedback:
+-0.1 -0.1 -0.1
+-0.1   0  -0.1
+-0.1 -0.1 -0.1
+
+current: -2
+
+control:
+0  0  0
+0 1.5 0
+0  0  0
+
+delay: 10
+
+delayed_control:
+0   0	0
+1.5 0	0
+0   0	0
+

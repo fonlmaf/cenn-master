@@ -1,0 +1,43 @@
+
+%Function:	Logic difference between the initial state and the input pictures with noise filtering.
+
+%TemLibName:	LogicDifference2
+
+%CNNModel:	Single-layer, CT-CNN, Delayed
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:Arbitrary(0), Boundary:Fixed(0)
+
+%Output:	Binary image where black pixels identify the moving parts of P.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood:1
+
+Feedback:
+0  0  0
+0  1  0
+0  0  0
+
+Current: -4.75
+
+Control:
+0.25  0.25  0.25
+0.25  2.00  0.25
+0.25  0.25  0.25
+
+delay: 10
+
+delayed_Feedback:
+0  0  0
+0  0  0
+0  0  0
+
+delayed_Control:
+-0.25  -0.25  -0.25
+-0.25  -2.00  -0.25
+-0.25  -0.25  -0.25
+

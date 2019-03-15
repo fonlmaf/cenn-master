@@ -1,0 +1,25 @@
+
+%Function:	Trigger-wave generator (expands the black regions).
+
+%TemLibName:	-
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:-, IniState:P, Boundary:Zero-flux
+
+%Output:	Binary image with enlarged objects of P obtained after a certain time.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NEIGHBORHOOD: 1
+
+FEEDBACK:
+0.25	0.25	0.25	
+0.25	3.0	0.25	
+0.25	0.25	0.25	
+
+CURRENT: 3.75   % 2.75 -> 3 nbr,  3.25 -> 2nbr, 3.75 -> 1 nbr

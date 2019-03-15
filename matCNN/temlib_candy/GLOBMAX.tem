@@ -1,0 +1,26 @@
+
+%Function:	Finds the global maximum.
+
+%TemLibName:	GlobalMaximumFinder
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static gray-scale image P
+
+%Setting:	Input:-, IniState:P, Boundary:Zero-flux
+
+%Output:	An image where intensities of the pixels are identical and equal to the maximum intensity of pixels in P. In other words, the output is filled up with the global maximum of P.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood: 1
+
+nonlin_Feedback:
+a- a- a-
+a- 1  a-
+a- a- a-
+
+a 1 3	-1 0.125   0 0	  1 0
+

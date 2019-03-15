@@ -1,0 +1,38 @@
+
+%Function:	Simulates the Müller-Lyer illusion.
+
+%TemLibName:	MüllerLyerIllusion
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P representing two horizontal lines between arrows. The arrows are black, the background is white.
+
+%Setting:	Input:P, IniState:P, Boundary:Fixed(0)
+
+%Output:	Binary image showing that the horizontal line on the top in P seems to be longer than the other one.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%  Center-surround template simulating the Muller-Lyer illusion
+
+neighborhood: 1
+
+feedback:
+0 0 0
+0  1.3 0
+0 0 0
+
+current: -2.8
+
+neighborhood: 2
+
+control:
+
+-.1 -.1 -.1 -.1 -.1
+-.1 -.1 -.1 -.1 -.1
+-.1 -.1 1.3 -.1 -.1
+-.1 -.1 -.1 -.1 -.1
+-.1 -.1 -.1 -.1 -.1
+

@@ -1,0 +1,32 @@
+
+%Function:	Filtering-reconstruction with constrained heat-diffusion.
+
+%TemLibName:	HeatDiffusion.
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static (noisy) gray-scale image P
+
+%Setting:	Input:P, IniState:P, Boundary:Fixed(0)
+
+%Output:	Grayscale image representing the result of the heat diffusion operation.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NEIGHBORHOOD: 2
+
+FEEDBACK 
+0.01 0.02 0.02 0.02 0.01
+0.02 0.02 0.03 0.02 0.02
+0.02 0.03 0.04 0.03 0.02
+0.02 0.02 0.03 0.02 0.02
+0.01 0.02 0.02 0.02 0.01
+
+CONTROL 
+0.01 0.02 0.02 0.02 0.01
+0.02 0.02 0.03 0.02 0.02
+0.02 0.03 0.04 0.03 0.02
+0.02 0.02 0.03 0.02 0.02
+0.01 0.02 0.02 0.02 0.01

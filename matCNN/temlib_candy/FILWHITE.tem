@@ -1,0 +1,29 @@
+
+%Function:	Drives the whole network into white.
+
+%TemLibName:	WhiteFiller
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static gray-scale image P
+
+%Setting:	Input:-, IniState:P, Boundary:Fixed(0)
+
+%Output:	Binary (white) image.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood:	1
+
+Feedback:	
+ 0 0 0
+ 0 2 0
+ 0 0 0
+
+
+Current: -4
+
+
+

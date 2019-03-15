@@ -1,0 +1,35 @@
+
+%Function:	Detects approximately diagonal lines.
+
+%TemLibName:	ApproxDiagonalLineDetector
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:P, Boundary:Fixed(0)
+
+%Output:	Binary image representing the locations of approximately diagonal lines in P.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood: 2
+
+Feedback:
+ 0 0 0 0 0
+ 0 0 0 0 0
+ 0 0 2 0 0
+ 0 0 0 0 0
+ 0 0 0 0 0
+
+current: -13
+
+control:
+ -1  -1    -1   0.5    1
+ -1  -1     1    1    0.5
+ -1   1     5    1    -1 
+ 0.5   1    1   -1    -1
+  1   0.5  -1   -1    -1
+

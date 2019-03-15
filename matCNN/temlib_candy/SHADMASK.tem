@@ -1,0 +1,32 @@
+
+%Function:	Creates a masked right shadow of the object.
+
+%TemLibName:	MaskedShadow
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary images P1 and P2
+
+%Setting:	Input:P1, IniState:P2, Boundary:Fixed(-1)
+
+%Output:	Binary image representing the result of pattern propagation of P2 in a particular direction. The propagation goes from the direction of the non-zero off-center feedback template entry and is halted by the mask P1.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood: 1
+
+Feedback:
+0   0   0
+0  1.8 1.5
+0   0   0
+
+Current: 0
+
+control:
+0   0   0
+0 -1.2  0
+0   0   0
+
+

@@ -1,0 +1,23 @@
+
+%Function:	Dilation (algo#).
+
+%TemLibName:	- ?
+
+%CNNModel:	Single-layer, CT-CNN
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+NEIGHBORHOOD: 1
+
+FEEDBACK:
+0  0  0
+0  2  0
+0  0  0
+
+CONTROL:
+ 0   0	  0
+ 1   1	  0
+ 1   1	  0
+
+CURRENT:  3.5
+

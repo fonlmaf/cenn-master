@@ -1,0 +1,30 @@
+
+%Function:	Extracts isolated black pixels.
+
+%TemLibName:	FigureRemover
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static binary image P
+
+%Setting:	Input:P, IniState:Arbitrary(0), Boundary:Fixed(0)
+
+%Output:	Binary image representing all isolated black pixels in P.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+neighborhood: 1
+
+feedback:
+0.0000   0.0000   0.0000
+0.0000   1.0000   0.0000
+0.0000   0.0000   0.0000
+
+control:
+-1.0000   -1.0000   -1.0000   
+-1.0000   1.0000   -1.0000   
+-1.0000   -1.0000   -1.0000   
+
+current:  -8.0000

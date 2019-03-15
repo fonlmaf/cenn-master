@@ -1,0 +1,33 @@
+
+%Function:	Gray-scale contour detection.
+
+%TemLibName:	ContourDetector
+
+%CNNModel:	Single-layer, CT-CNN
+
+%Given:		Static gray-scale image P
+
+%Setting:	Input:P, IniState:P, Boundary:Fixed(0)
+
+%Output:	Binary image where black pixels represent the contours of objects in P.
+
+%Timing:	-
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Neighborhood: 1
+
+NONLIN_Feedback:
+0  0  0
+0  2  0
+0  0  0
+
+Current: 0.7
+
+nonlin_Control:
+a- a- a-
+a- 0  a-
+a- a- a-
+
+a 0 3  -0.18 0.5   0.18 -1    1 0.5
+
